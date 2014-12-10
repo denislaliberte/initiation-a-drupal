@@ -2,9 +2,9 @@
 ## Présentation
 La présentation est disponible à cet url.
 
-[bit.ly / drupalini](http://bit.ly/drupalini)
+[bit.ly / drupal-ini](http://bit.ly/drupal-ini)
 
-[initiation-a-drupal.pdf](initiation-a-drupal.pdf)
+[initiation-a-drupal.pdf](http://denislaliberte.github.io/initiation-a-drupal/initiation-a-drupal.pdf)
 
 ## Agenda
 - Drush
