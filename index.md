@@ -465,7 +465,7 @@ En déclarant le hook_preprocess_hook,  un module peut modifier les variables qu
 Drupal passe à un template.
 
 Comme premier exemple le html.tpl.php est le premier template de Drupal, il
-contient par exemple la balise '<head>' ou on aimerait ajouter l'id de Google 
+contient par exemple la balise ```<head>``` ou on aimerait ajouter l'id de Google 
 Analytics
 --
 

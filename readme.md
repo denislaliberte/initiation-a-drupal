@@ -244,14 +244,14 @@ function menu_example_menu() {
 ```
 
 
-example.local/examples/menu_example
-
-Si on veux ajouter la route examples/menu_example à notre projet,
+Si on veux ajouter la routeexamples/menu_example à notre projet,
 on ajoute la route comme clé à l'array que retourne le hook et 
 on déclare une fonction callback et une validation d'accès.
 
 En retournant 'TRUE', on s'assure que tout les rôles ont accès
 à notre page.
+
+example.local/examples/menu_example
 
 ```php
 function menu_example_menu() {
@@ -269,9 +269,6 @@ function menu_example_menu() {
 La fonction callback définie dans le hook_menu retourne le markup à afficher
 dans le contenu de la route.
 
-Voici la documentation du hook menu et celle du hook_i18n_translate_path qui
-est pratique pour associer les routes des différentes langues pour que Drupal
-puisse construire le language switcher.
 
 ```php
 function _menu_example_basic_instructions($content = NULL) {
@@ -284,6 +281,10 @@ function _menu_example_basic_instructions($content = NULL) {
 
 
 ### Documentation hook_menu
+
+Voici la documentation du hook menu et celle du hook_i18n_translate_path qui
+est pratique pour associer les routes des différentes langues pour que Drupal
+puisse construire le language switcher.
 
 [ hook_menu | drupal.org ](https://api.drupal.org/api/drupal/modules%21system%21system.api.php/function/hook_menu/7)
 
@@ -310,10 +311,10 @@ function my_example_theme() {
 ```
 
 
-### template files
+### my-template-name.tpl.php
 
-Dans notre exemple, on déclare un fichier template
-my-template-name.tpl.php
+Dans notre exemple, on déclare un fichier template qui affiche la variable $title
+dans une balise h1.
 ```php
   <h1><?php print $title ?></h1>
 ```
@@ -343,7 +344,7 @@ En déclarant le hook_preprocess_hook,  un module peut modifier les variables qu
 Drupal passe à un template.
 
 Comme premier exemple le html.tpl.php est le premier template de Drupal, il
-contient par exemple la balise <head> ou on aimerait ajouter l'id de Google 
+contient par exemple la balise ```<head>``` ou on aimerait ajouter l'id de Google 
 Analytics
 
 ```php
