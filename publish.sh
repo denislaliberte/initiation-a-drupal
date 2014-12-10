@@ -8,3 +8,8 @@ sed '/--/d' index.md |  sed '/template:/d' |sed '/class:/d' |sed '/name:/d' | se
 
 ## build 
 pandoc -o initiation-a-drupal.pdf readme.md
+
+## push to github pages
+git checkout gh-pages
+git merge master
+git push origin gh-pages
