@@ -705,7 +705,7 @@ On a aussi accès à un setter.
 --
 
 ```php
-  $node_wrapper->field_number->set(1); 
+  $wrapper->field_number->set(1); 
 ```
 ---
 template:entity
