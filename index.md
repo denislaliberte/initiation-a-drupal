@@ -100,6 +100,21 @@ site_name was set to "new-name".
 
 ---
 template: drush
+
+### cache
+
+???
+La cache de drupal est capricieuse, même si on la désactive sur une instance de
+développement, il faut quand même la vider lorsqu'on change une configuration ou
+qu'on déclare un hook.
+--
+
+```bash
+$ drush cache-clear all
+```
+
+---
+template: drush
 ### Script
 
 ???
@@ -216,12 +231,13 @@ block_example_block_info().
 ---
 template: block
 
-### HOOK_block_info
 ???
 Le hook block_info: on retourne les informations de notre bloc à Drupal.
 --
 
 ```php
+function block_example_block_info() {
+//  [... ]
   $blocks['example_uppercase'] = array(
     'info' => t('Example: uppercase this please'),
     'status' => TRUE,
@@ -275,16 +291,18 @@ function block_example_block_view($delta = '') {
 
 ---
 template: block
-### example_empty
 
 ???
 On a simplement à ajouter la string que nous voulons afficher comme valeur à 
 la clé 'content' pour qu'elle s'affiche dans le bloc.
 --
 ```php
+function block_example_block_view($delta = '') {
+  switch ($delta) {
+//    [...]
     case 'example_empty':
       $block['subject'] = t('Title of second block');
-      $block['content'] = block_example_contents($delta);
+*     $block['content'] = block_example_contents($delta);
     break;
 ```
 
