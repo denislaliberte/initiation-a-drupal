@@ -1256,3 +1256,10 @@ function it_add_image_url($drupal) {
     ->shouldHaveValueInString(['field_image','url'],'http://example.com/path/to/test.png');
 }
 ```
+
+
+---
+## Initiation à drupal
+
+[bit.ly / drupal-ini](http://bit.ly/drupal-ini)
+
